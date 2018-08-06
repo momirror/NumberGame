@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">NumberGame</string>
+    <string name="app_name">欢乐数字</string>
+    <string name="title_activity_start">StartActivity</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
