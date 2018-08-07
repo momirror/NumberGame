@@ -1,9 +1,11 @@
 package com.example.msp.numbergame;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class SelectActivity extends Activity {
 
@@ -46,6 +48,10 @@ public class SelectActivity extends Activity {
         if(MainActivity.isPlay) {
             PlayMusic();
         }
+    }
+
+    public void OnOne(View v) {
+        startActivity(new Intent(SelectActivity.this,OneActivity.class));
     }
 
 }
