@@ -13,7 +13,7 @@
         android:layout_above="@+id/btn_music"
         android:layout_centerHorizontal="true"
         android:background="@drawable/play_btn"
-        android:onClick="Onplay"
+        android:onClick="OnPlay"
         />
     <Button
         android:layout_width="60dp"
