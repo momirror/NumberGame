@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.MediaPlayer;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
@@ -33,12 +34,40 @@ public class OneActivity extends Activity {
     Bitmap arrdown;
     boolean typedialog = true;
     private LinearLayout linearLayout = null;
+    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_number);
+
+        if(MainActivity.isPlay) {
+            PlayMusice();
+        }
+
         initView();
+    }
+
+    private void PlayMusice() {
+        mediaPlayer = MediaPlayer.create(this,R.raw.music1);
+        mediaPlayer.setLooping(true);
+        mediaPlayer.start();
+    }
+
+    protected void onStop() {
+        super.onStop();
+        if(mediaPlayer != null) {
+            mediaPlayer.stop();
+        }
+    }
+
+    protected void onDestroy() {
+        super.onDestroy();
+        if(mediaPlayer != null) {
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
     }
 
     private  void initView() {
