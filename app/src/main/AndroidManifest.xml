@@ -24,7 +24,7 @@
         <activity
             android:name=".SelectActivity"
             android:theme="@style/FullscreenTheme" />
-        <activity android:name=".AboutActivity" />
+        <activity android:name=".AboutActivity" android:theme="@style/FullscreenTheme"/>
         <activity android:name=".OneActivity" android:theme="@style/FullscreenTheme"></activity>
     </application>
 
