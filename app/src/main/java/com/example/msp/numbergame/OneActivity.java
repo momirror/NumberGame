@@ -20,8 +20,11 @@ import java.io.InputStream;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import util.mCustomProgressDialog;
+
 public class OneActivity extends Activity {
 
+    public mCustomProgressDialog mdialog;
     private ImageView iv_frame;
     int i = 1;
     float x1,y1,x2,y2,x3,y3;
@@ -68,6 +71,14 @@ public class OneActivity extends Activity {
             mediaPlayer.release();
             mediaPlayer = null;
         }
+    }
+
+    public void OnYS(View view) {
+        if(mdialog == null) {
+            mdialog = new mCustomProgressDialog(this,"演示中点击边缘取消演示动画",R.anim.frame1);
+        }
+
+        mdialog.show();
     }
 
     private  void initView() {
